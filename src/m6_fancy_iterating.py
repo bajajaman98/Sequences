@@ -49,11 +49,11 @@ def main():
 
     #run_test_print_all_items_forwards(sequence1, sequence2, sequence3, sequence4)
     #run_test_print_all_items_backwards(sequence1, sequence2, sequence3, sequence4)
-    #run_test_print_items_at_odd_indices(sequence1, sequence2, sequence3, sequence4)
+    run_test_print_items_at_odd_indices(sequence1, sequence2, sequence3, sequence4)
     #run_test_print_items_in_second_half(sequence1, sequence2, sequence3, sequence4)
     #run_test_print_items_that_are_bigger_than_5()  # Uses different sequences
     #run_test_print_items_that_are_strings(sequence1, sequence2, sequence3, sequence4)
-    run_test_print_items_that_are_odd_integers(sequence1, sequence2, sequence3, sequence4)
+    #run_test_print_items_that_are_odd_integers(sequence1, sequence2, sequence3, sequence4)
 
 
 def run_test_print_all_items_forwards(sequence1, sequence2, sequence3, sequence4):
@@ -391,9 +391,8 @@ def print_all_items_backwards(sequence):
 #   -- in this sample problem, every other item in the sequence.
 # ----------------------------------------------------------------------
 def print_items_at_odd_indices(sequence):
-    for k in range(len(sequence)):
-        if k % 2 != 0:
-            print("{} is at index {}".format(sequence[k],k))
+    for k in range(1,len(sequence),2):
+        print("{} is at index {}".format(sequence[k],k))
     """
     Prints the items at the odd-numbered indices in the given sequence,
     along with their positions (indices) in the sequence.
@@ -524,7 +523,7 @@ def print_items_that_are_odd_integers(sequence):
       33 is at index 5
     """
     # ------------------------------------------------------------------
-    # TODO: 9. Implement and test this function.
+    # DONE: 9. Implement and test this function.
     #
     # IMPORTANT:  The  type  function returns  int  if its argument
     #   is an integer.  Note that   int   has NO quotes surrounding it.
